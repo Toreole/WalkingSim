@@ -8,7 +8,7 @@ A template for **3D Walking Simulator (Unity)** projects.
 
 ## Facts
 
-- Unity 5.5.0f3
+- Unity 5.5.2f1
 - ProBuilder Basic 2.6.9f3
 - Unity Standard Assets (Unity Essentials) 1.1.2
   - not included: Vehicles & 2D
