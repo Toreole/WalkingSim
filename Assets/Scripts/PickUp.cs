@@ -24,6 +24,8 @@ public class PickUp : MonoBehaviour
 				//hitObject = hit.collider.gameObject;
 				hitObject = hit.transform.gameObject;
 				hitObject.transform.parent = gameObject.transform;
+
+				hitObject.GetComponent<Rigidbody>().isKinematic = true;
 			}
 
 		}
@@ -31,6 +33,7 @@ public class PickUp : MonoBehaviour
 		if (Input.GetMouseButtonUp(0))
 		{
 			hitObject.transform.parent = null;
+			hitObject.GetComponent<Rigidbody>().isKinematic = false;
 			hitObject = null;
 		}
 	}
