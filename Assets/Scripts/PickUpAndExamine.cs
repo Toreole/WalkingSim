@@ -81,7 +81,7 @@ public class PickUpAndExamine : MonoBehaviour
 
 		if (objectIsPickedUp && !examiningObject)
 		{
-			hitObject.transform.eulerAngles = new Vector3(handPosition.transform.eulerAngles.x, handPosition.transform.eulerAngles.y, handPosition.transform.eulerAngles.z);
+			//hitObject.transform.eulerAngles = new Vector3(handPosition.transform.eulerAngles.x, handPosition.transform.eulerAngles.y, handPosition.transform.eulerAngles.z);
 		}
 
 		// ===========================
