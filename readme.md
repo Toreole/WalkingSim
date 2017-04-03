@@ -1,33 +1,55 @@
-﻿# Template: Walking Simulator
+# Template: Walking Simulator
 
 A template for **3D Walking Simulator (Unity)** projects.
 
 ## Structure
 
-- ?
-
-## Facts
-
 - Unity 5.5.2f1
-- ProBuilder Basic 2.6.9f3
 - TextMesh Pro (free) 1.0.54
-- Unity Standard Assets (Unity Essentials) 1.1.2
-   - not included: Vehicles & 2D
+  - for easier text / object creation
+- (some parts of) Unity Standard Assets (Unity Essentials) 1.1.2
 
 ## How to use it?
 
-- ?
-
-### How to start a new project?
-
-- fork this template into a new repository / project
-- ?
+- fork this template into a new repository
 - start developing your game
+  - make new object
+  - make new features
 
-## Copyright
+## Version-History
 
-?
+### Todos / Bugs / Ideas
 
-## Todos / Bugs / Ideas
+Additional features:
+- menu
+- scripted audio
+- more complex examination
+  - turning of the object
+- etc.
 
-- ?
+### Release 0.1 (work in progress)
+
+- first set of features
+  - walking / turning / jumping
+  - zoom / pickUp / examine
+- example scene
+- first release
+  - primarily made for a course at the BTK for summer semester 2017
+
+## Credits
+
+- **csongor baranyai**  
+- csongorb (at) gmail (dot) com  
+- [www.csongorb.com](http://www.csongorb.com)
+
+CameraZoom inspired by:
+- first person drifter version 1.0 // 20.1.2014
+- compiled by @torahhorse [http://torahhorse.com]
+- email: benjamin.esposito@gmail.com
+
+## Licence
+
+[![Creative Commons License](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc/4.0/)
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).
+
+All other parts / media (code, images, software, etc.) remain the property of their copyright holders.
