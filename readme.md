@@ -30,6 +30,7 @@ Additional features:
 - keys unlocking doors
 - more complex examination
    - turning-types for different objects, etc.
+- better collision detection
 - etc.
 
 ### Release 0.1 (3. April 2017)
