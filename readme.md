@@ -6,35 +6,40 @@ A template for **3D Walking Simulator (Unity)** projects.
 
 - Unity 5.5.2f1
 - TextMesh Pro (free) 1.0.54
-  - for easier text / object creation
+   - for easier text / object creation
 - (some parts of) Unity Standard Assets (Unity Essentials) 1.1.2
 
 ## How to use it?
 
 - fork this template into a new repository
 - start developing your game
-  - make new object
-  - make new features
+   - make new object
+   - make new features
 
 ## Version-History
 
 ### Todos / Bugs / Ideas
 
 Additional features:
+
 - menu
-- scripted audio
+- save / load
+- putting objects back into their default position
+- trigger for audio-logs / off-text
+- opening / closing doors / chests
+- keys unlocking doors
 - more complex examination
-  - turning of the object
+   - turning-types for different objects, etc.
 - etc.
 
-### Release 0.1 (work in progress)
+### Release 0.1 (3. April 2017)
 
 - first set of features
-  - walking / turning / jumping
-  - zoom / pickUp / examine
+   - walking / turning / jumping
+   - zoom / pickUp / examine
 - example scene
 - first release
-  - primarily made for a course at the BTK for summer semester 2017
+   - primarily made for a course at the BTK for summer semester 2017
 
 ## Credits
 
@@ -43,8 +48,9 @@ Additional features:
 - [www.csongorb.com](http://www.csongorb.com)
 
 CameraZoom inspired by:
+
 - first person drifter version 1.0 // 20.1.2014
-- compiled by @torahhorse [http://torahhorse.com]
+- compiled by [@torahhorse](http://torahhorse.com)
 - email: benjamin.esposito@gmail.com
 
 ## Licence

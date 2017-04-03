@@ -38,8 +38,8 @@ public class PickUpAndExamine : MonoBehaviour
 				// check if objects in front of the camera
 				// important! player must be on layer "IgnoreRaycast"!
 				Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-      	RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+      		RaycastHit hit;
+        		if (Physics.Raycast(ray, out hit))
 				{
 
 					// debug
@@ -81,13 +81,14 @@ public class PickUpAndExamine : MonoBehaviour
 
 		if (objectIsPickedUp && !examiningObject)
 		{
+			hitObject.transform.eulerAngles = new Vector3(handPosition.transform.eulerAngles.x, handPosition.transform.eulerAngles.y, handPosition.transform.eulerAngles.z);
 		}
 
 		// ===========================
 
 		if (examiningObject)
 		{
-			hitObject.transform.eulerAngles = new Vector3(0.0f, handPosition.transform.eulerAngles.y, handPosition.transform.eulerAngles.z);
+			hitObject.transform.eulerAngles = new Vector3(0.0f, xPosition.transform.eulerAngles.y, xPosition.transform.eulerAngles.z);
 		}
 
 		// ===========================
