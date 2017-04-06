@@ -33,6 +33,11 @@ Additional features:
 - better collision detection
 - etc.
 
+### Release 0.11 (6. April 2017)
+
+- minor changes
+- some new feature ideas
+
 ### Release 0.1 (3. April 2017)
 
 - first set of features
