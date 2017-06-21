@@ -30,8 +30,11 @@ Additional features:
 - keys unlocking doors
 - more complex examination
    - turning-types for different objects, etc.
-- better collision detection
 - etc.
+
+### Release 0.12 (21. June 2017)
+
+- better collision detection (stonetablet)
 
 ### Release 0.11 (6. April 2017)
 
