@@ -4,8 +4,8 @@ A template for **3D Walking Simulator (Unity)** projects.
 
 ## Structure
 
-- Unity 5.5.2f1
-- TextMesh Pro (free) 1.0.54
+- Unity 2017.3.1f1
+- TextMesh Pro (free) 1.0.56.0b3
    - for easier text / object creation
 - (some parts of) Unity Standard Assets (Unity Essentials) 1.1.2
 
@@ -31,6 +31,12 @@ Additional features:
 - more complex examination
    - turning-types for different objects, etc.
 - etc.
+
+### Release 0.13 (Work in Progress)
+
+- updated to
+	- Unity 2017.3.1f1
+	- TextMesh Pro (free) 1.0.56.0b3
 
 ### Release 0.12 (21. June 2017)
 
