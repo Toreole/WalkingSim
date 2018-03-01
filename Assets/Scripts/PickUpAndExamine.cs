@@ -119,7 +119,9 @@ public class PickUpAndExamine : MonoBehaviour
 			if (!examiningObject)
 			{
 				hitObject.transform.position = examinePosition.transform.position;
-				//hitObject.transform.rotation = gameObject.transform.rotation;
+				if (myPickUpObjectScript.adjustObject){
+					hitObject.transform.eulerAngles = gameObject.transform.eulerAngles;
+				}
 				examiningObject = true;
 				myFirstPersonController.enabled = false;
 

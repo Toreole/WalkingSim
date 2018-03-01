@@ -39,6 +39,7 @@ Additional features:
 - added
 	- freeze rotation of object in editor
 	- character freezes during examination of an object
+	- adjust object when examining 
 - updated to
 	- Unity 2017.3.1f1
 	- TextMesh Pro (free) 1.0.56.0b3

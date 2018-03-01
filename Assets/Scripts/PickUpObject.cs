@@ -4,6 +4,7 @@ using UnityEngine;
 public class PickUpObject : MonoBehaviour
 {
 
+	public bool adjustObject = false;
 	public bool rotateHorizontal = false;
 	public bool rotateVertical = false;
 
