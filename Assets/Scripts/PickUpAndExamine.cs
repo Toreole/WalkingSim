@@ -1,5 +1,7 @@
 
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
+
 
 public class PickUpAndExamine : MonoBehaviour
 {
@@ -8,8 +10,12 @@ public class PickUpAndExamine : MonoBehaviour
 	private bool objectIsPickedUp = false;
 	private bool examiningObject = false;
 
+	private PickUpObject myPickUpObjectScript;
+
+	private FirstPersonController myFirstPersonController;
+
 	public GameObject handPosition;
-	public GameObject xPosition;
+	public GameObject examinePosition;
 
 	public float thrust = 300f;
 
@@ -23,6 +29,10 @@ public class PickUpAndExamine : MonoBehaviour
 	void Start ()
 	{
 		SetBaseFOV(GetComponent<Camera>().fieldOfView);
+
+		// get the FirstPersonController of the parent object (player)
+		myFirstPersonController = transform.parent.gameObject.GetComponent<FirstPersonController>();
+
 	}
 
 	// Update is called once per frame
@@ -38,7 +48,7 @@ public class PickUpAndExamine : MonoBehaviour
 				// check if objects in front of the camera
 				// important! player must be on layer "IgnoreRaycast"!
 				Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-      		RaycastHit hit;
+      			RaycastHit hit;
         		if (Physics.Raycast(ray, out hit))
 				{
 
@@ -49,12 +59,15 @@ public class PickUpAndExamine : MonoBehaviour
 					if (hit.transform.gameObject.GetComponent<Rigidbody>() != null)
 					{
 
-						// check if object has tag
-						if (hit.transform.gameObject.tag == "PickUp")
+						// check if object has pickup-script
+						if (hit.transform.gameObject.GetComponent("PickUpObject"))
 						{
 
 							// get object
 							hitObject = hit.transform.gameObject;
+
+							// get script
+							myPickUpObjectScript = hitObject.GetComponent<PickUpObject>();
 
 							// pick up object
 							hitObject.transform.parent = handPosition.transform;
@@ -88,7 +101,14 @@ public class PickUpAndExamine : MonoBehaviour
 
 		if (examiningObject)
 		{
-			hitObject.transform.eulerAngles = new Vector3(0.0f, xPosition.transform.eulerAngles.y, xPosition.transform.eulerAngles.z);
+			if (myPickUpObjectScript.rotateHorizontal){
+				hitObject.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"), 0, 0));
+
+			}
+			if (myPickUpObjectScript.rotateVertical){
+				hitObject.transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), 0));
+
+			}
 		}
 
 		// ===========================
@@ -98,8 +118,11 @@ public class PickUpAndExamine : MonoBehaviour
 		{
 			if (!examiningObject)
 			{
-				hitObject.transform.position = xPosition.transform.position;
+				hitObject.transform.position = examinePosition.transform.position;
+				//hitObject.transform.rotation = gameObject.transform.rotation;
 				examiningObject = true;
+				myFirstPersonController.enabled = false;
+
 			}
 		}
 
@@ -112,6 +135,7 @@ public class PickUpAndExamine : MonoBehaviour
 			{
 				hitObject.transform.position = handPosition.transform.position;
 				examiningObject = false;
+				myFirstPersonController.enabled = true;
 			}
 		}
 
