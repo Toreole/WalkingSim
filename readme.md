@@ -32,14 +32,16 @@ Additional features:
    - turning-types for different objects, etc.
 - etc.
 
-### Release 0.13 (Work in Progress)
+### Release 0.13 (25. March 2018)
 
-- changed
+- changed / improved
 	- definition of a pickUp-object through script (NOT tag)
+	- examination of an object
+		- option to freeze rotation
+		- character freezes during examination
+		- adjust when examining
 - added
-	- freeze rotation of object in editor
-	- character freezes during examination of an object
-	- adjust object when examining 
+	- show version number
 - updated to
 	- Unity 2017.3.1f1
 	- TextMesh Pro (free) 1.0.56.0b3
