@@ -4,10 +4,7 @@ A template for **3D Walking Simulator (Unity)** projects.
 
 ## Structure
 
-- Unity 2017.3.1f1
-- TextMesh Pro (free) 1.0.56.0b3
-   - for easier text / object creation
-- (some parts of) Unity Standard Assets (Unity Essentials) 1.1.2
+- Unity 2019.3.9f1
 
 ## How to use it?
 
@@ -31,6 +28,20 @@ Additional features:
 - more complex examination
    - turning-types for different objects, etc.
 - etc.
+
+### Release 0.14 (10. April 2020)
+
+- removed
+ 	- Unity Standard Assets
+		- incl. FirstPersonController
+- added
+	- own MouseLook & FirstPersonController
+		- heavily inspired by [Brackeys: First Person Movement in Unity (YouTube)](https://www.youtube.com/watch?v=_QajrabyTJc)
+	- egg (easter surprise!)
+		- 3D-Model: https://free3d.com/3d-model/egg-v1--18643.html
+- updated to
+	- Unity 2019.3.9f1
+	- TextMesh Pro as part of Unity
 
 ### Release 0.13 (25. March 2018)
 

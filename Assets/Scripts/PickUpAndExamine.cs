@@ -1,7 +1,5 @@
 
 using UnityEngine;
-using UnityStandardAssets.Characters.FirstPerson;
-
 
 public class PickUpAndExamine : MonoBehaviour
 {
@@ -12,7 +10,7 @@ public class PickUpAndExamine : MonoBehaviour
 
 	private PickUpObject myPickUpObjectScript;
 
-	private FirstPersonController myFirstPersonController;
+	public CharacterController myCharacterController;
 
 	public GameObject handPosition;
 	public GameObject examinePosition;
@@ -30,9 +28,8 @@ public class PickUpAndExamine : MonoBehaviour
 	{
 		SetBaseFOV(GetComponent<Camera>().fieldOfView);
 
-		// get the FirstPersonController of the parent object (player)
-		myFirstPersonController = transform.parent.gameObject.GetComponent<FirstPersonController>();
-
+		// get the CharacterController of the parent object (player)
+		myCharacterController = transform.parent.gameObject.GetComponent<CharacterController>();
 	}
 
 	// Update is called once per frame
@@ -123,8 +120,8 @@ public class PickUpAndExamine : MonoBehaviour
 					hitObject.transform.eulerAngles = gameObject.transform.eulerAngles;
 				}
 				examiningObject = true;
-				myFirstPersonController.enabled = false;
-
+				myCharacterController.enabled = false;
+				GetComponent<MouseLook>().enabled = false;
 			}
 		}
 
@@ -137,7 +134,8 @@ public class PickUpAndExamine : MonoBehaviour
 			{
 				hitObject.transform.position = handPosition.transform.position;
 				examiningObject = false;
-				myFirstPersonController.enabled = true;
+				myCharacterController.enabled = true;
+				GetComponent<MouseLook>().enabled = true;
 			}
 		}
 
