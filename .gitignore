@@ -3,6 +3,7 @@
 # Unity
 
 /[Ll]ibrary/
+/[Ll]ogs/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
@@ -24,6 +25,7 @@ ExportedObj/
 *.unityproj
 *.booproj
 *.tmp
+*.log
 
 # ============
 # OS
@@ -35,3 +37,5 @@ ExportedObj/
 .Trashes
 Icon?
 Thumbs.db
+
+Logs/
