@@ -45,7 +45,6 @@ public class PickUpAndExamine : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
 		if (Input.GetButtonDown("Fire1"))
 		{
 			if (!objectIsPickedUp)
@@ -92,6 +91,9 @@ public class PickUpAndExamine : MonoBehaviour
 				hitObject = null;
 				
 				objectIsPickedUp = false;
+				examiningObject = false;
+				myCharacterController.enabled = true;
+				GetComponent<MouseLook>().enabled = true;
 			}
 		}
 
