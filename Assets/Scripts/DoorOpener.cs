@@ -62,6 +62,8 @@ public class DoorOpener : MonoBehaviour
                         {
                             if(keys.Contains(door.RequiredKey))
                                 door.ToggleLocked();
+                            else
+                                PopupMessage.ShowMessage("I need the key to unlock this.");     
                         }
                         else
                             door.ToggleLocked();
@@ -82,7 +84,11 @@ public class DoorOpener : MonoBehaviour
                 if(key)
                 {
                     if(Input.GetMouseButtonDown(0))
-                        keys.Add(key.GetItem());
+                    {
+                        var item = key.GetItem();
+                        keys.Add(item);
+                        PopupMessage.ShowMessage($"Picked up {item.name}.");
+                    }
                 }
             }
         }

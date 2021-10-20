@@ -41,6 +41,7 @@ public class Door : MonoBehaviour
     {
         if(isLocked)
         {
+            PopupMessage.ShowMessage("Locked.");   
             audioSource.clip = rumbleSfx;
             audioSource.Play();
             return;
