@@ -22,6 +22,11 @@ public class DoorOpener : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    private void OnGUI() 
+    {
+        GUILayout.Label("Move: WASD\nPick Up/Open Door: Leftclick\n(Un)lock Door: E\nLook through Keyhole: (Hold) F");
+    }
+
     // Update is called once per frame
     void Update()
     {

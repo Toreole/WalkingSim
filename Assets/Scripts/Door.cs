@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class Door : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Door : MonoBehaviour
     public Key RequiredKey => requiredKey;
 
     Coroutine routine;
+
+    public event Action OnStartPeeping;
 
     bool opened = false;
     float currentTime = 0f;
@@ -51,6 +54,8 @@ public class Door : MonoBehaviour
         routine = StartCoroutine(DoToggleOpen());
     }
 
+    internal void ForceOverrideKey(Key key) => requiredKey = key;
+
     IEnumerator DoToggleOpen()
     {
         if(opened)
@@ -78,6 +83,7 @@ public class Door : MonoBehaviour
 
     public Transform GetKeyHole(Vector3 playerPosition)
     {
+        OnStartPeeping?.Invoke();
         float innerDist = Vector3.SqrMagnitude(innerKeyholePos.position - playerPosition);
         float outerDist = Vector3.SqrMagnitude(outerKeyholePos.position - playerPosition);
         if(innerDist < outerDist)
